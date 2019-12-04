@@ -5212,6 +5212,11 @@ micromatch@^3.1.10, micromatch@^3.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.2"
 
+middleware-io@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/middleware-io/-/middleware-io-2.1.0.tgz#ff399e92d1dbf94fcedd659773d45489f3a7519f"
+  integrity sha512-zIZuD893z8OuNjQjvx2209PYrXpP8VjiDKzj20o1VLa5e8khyxMbLTLBxmT3oFeiDryflzqJNTRQq+5GevhYug==
+
 miller-rabin@^4.0.0:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/miller-rabin/-/miller-rabin-4.0.1.tgz#f080351c865b0dc562a8462966daa53543c78a4d"
@@ -5443,6 +5448,11 @@ nice-try@^1.0.4:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
+
+node-fetch@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
+  integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
 
 node-forge@0.9.0:
   version "0.9.0"
@@ -7442,6 +7452,11 @@ safe-regex@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
+sandwich-stream@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/sandwich-stream/-/sandwich-stream-2.0.2.tgz#6d1feb6cf7e9fe9fadb41513459a72c2e84000fa"
+  integrity sha512-jLYV0DORrzY3xaz/S9ydJL6Iz7essZeAfnAavsJ+zsJGZ1MOnsS52yRjU3uF3pJa/lla7+wisp//fxOwOH8SKQ==
+
 sane@^2.0.0:
   version "2.5.2"
   resolved "https://registry.yarnpkg.com/sane/-/sane-2.5.2.tgz#b4dc1861c21b427e929507a3e751e2a2cb8ab3fa"
@@ -8530,6 +8545,16 @@ verror@1.10.0:
     assert-plus "^1.0.0"
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
+
+vk-io@^4.0.0-rc.29:
+  version "4.0.0-rc.29"
+  resolved "https://registry.yarnpkg.com/vk-io/-/vk-io-4.0.0-rc.29.tgz#3c697513d78f9fe5796171ada65c8a4d3f6715c0"
+  integrity sha512-LP9ZWeK4e7x27v/F2MxNoKGCjLd6Dx5P1Rn0aamRfXK/mz6GIjtyw6IL2WG2HniyHU17noqGIlPBRJ89ag1WMg==
+  dependencies:
+    debug "^4.1.1"
+    middleware-io "^2.1.0"
+    node-fetch "^2.6.0"
+    sandwich-stream "^2.0.2"
 
 vm-browserify@^1.0.1:
   version "1.1.2"
