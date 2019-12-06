@@ -5,9 +5,18 @@ import express from "express";
 import { renderToString } from "react-dom/server";
 import VK from "./vk";
 
+const APP_ID = 7234319;
+
 const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
 const server = express();
+
+server.get("/auth", async (req, res) => {
+  const HOST = "http://localhost:3000/";
+  const AUTH_LINK = `https://oauth.vk.com/authorize?client_id=${APP_ID}&display=page&redirect_uri=${HOST}&response_type=token&v=5.103`;
+
+  res.redirect(AUTH_LINK);
+});
 
 server.get("/getLikes", async ({ query: { access_token, post_url } }, res) => {
   const response = await VK.analyzePost(access_token, post_url);
