@@ -23,6 +23,8 @@ const VK = {
 
     // Get first batch of ids
     const responseLikes = await getLikes(vk, post_url);
+    // No results
+    if (!responseLikes) return [];
     ids = [...responseLikes.items];
 
     // if users more than MAX_VALUES get another batches
@@ -47,7 +49,9 @@ const VK = {
 };
 
 async function getLikes(vk, post_url, offset = 0) {
-  const [nothing, owner_id, item_id] = post_url.match(/wall(.+)_(.+)/);
+  const parsedUrl = post_url.match(/wall(.+)_(.+)/);
+  if (!parsedUrl) return null;
+  const [nothing, owner_id, item_id] = parsedUrl;
 
   return await vk.api.likes.getList({
     ...OPTIONS_LIKES_GETLIST,
