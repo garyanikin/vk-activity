@@ -61,15 +61,23 @@ const Home = props => {
     'Добавь ссылку на пост и страница выдаст id всех пользователей которые поставили "Мне нравится".';
   // Результат можно отфильтровать по городам пользователей.
 
-  console.log("searchResult", searchResult);
   return [
     <CssBaseline />,
     <Container>
       <Grid container spacing={3}>
         <Grid item xs={12}>
-          <Paper className={classes.root} component="form">
+          <Paper
+            style={{
+              marginTop: "1rem",
+              display: "flex"
+            }}
+            component="form"
+          >
             <InputBase
-              className={classes.input}
+              style={{
+                paddingLeft: "1rem",
+                flex: 1
+              }}
               fullWidth
               placeholder="Ссылка на пост"
               inputRef={searchRef}

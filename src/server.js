@@ -12,7 +12,7 @@ const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 const server = express();
 
 server.get("/auth", async (req, res) => {
-  const HOST = "http://localhost:3000/";
+  const HOST = "https://vk-activity.now.sh/";
   const AUTH_LINK = `https://oauth.vk.com/authorize?client_id=${APP_ID}&display=page&redirect_uri=${HOST}&response_type=token&v=5.103`;
 
   res.redirect(AUTH_LINK);
