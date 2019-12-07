@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "dev": "razzle start",
+    "dev": "rm -rf build && razzle start",
     "start": "node build/server.js",
     "build": "PORT=80 razzle build",
     "test": "razzle test --env=jsdom",

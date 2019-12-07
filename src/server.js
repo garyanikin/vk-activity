@@ -11,9 +11,12 @@ const assets = require(process.env.RAZZLE_ASSETS_MANIFEST);
 
 const server = express();
 
-server.get("/auth", async (req, res) => {
-  const HOST = "https://vk-activity.now.sh/";
-  const AUTH_LINK = `https://oauth.vk.com/authorize?client_id=${APP_ID}&display=page&redirect_uri=${HOST}&response_type=token&v=5.103`;
+server.get("/auth", async ({ query: { search } }, res) => {
+  const _HOST = isDev()
+    ? "http://localhost:3000"
+    : "https://vk-activity.now.sh/";
+  console.log("search", search);
+  const AUTH_LINK = `https://oauth.vk.com/authorize?client_id=${APP_ID}&display=mobile&redirect_uri=${_HOST}&response_type=token&v=5.103`;
 
   res.redirect(AUTH_LINK);
 });
@@ -64,5 +67,9 @@ server
       );
     }
   });
+
+function isDev() {
+  return process.env.NODE_ENV === "development";
+}
 
 export default server;
